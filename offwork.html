@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>PinYi's Off Work</title>
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <style>
+        /* 專屬於這頁的照片網格排版 */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 強制兩欄並排 */
+            gap: 16px; /* 照片間距 */
+            margin-top: 20px;
+        }
+        .photo-grid img {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 4/3; /* 統一照片比例 */
+            object-fit: cover; /* 讓不同尺寸的照片填滿框架且不變形 */
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        }
+        
+        /* 手機版單欄顯示 */
+        @media (max-width: 600px) {
+            .photo-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navigation">
+        <a href="index.html">Personal Side</a>
+        <a href="offwork.html" class="active">Off Work</a>
+    </nav>
+
+    <main class="main">
+        <header class="profile">
+            <img class="avatar" alt="avatar" src="images/avatar.png">
+            <h1>PinYi's Off Work</h1>
+        </header>
+
+        <section id="section">
+            <p><strong>一名後端工程師，業餘投入重訓，和一隻貓住在一起</strong></p>
+            <blockquote>
+                <p>email：<a href="mailto:pinyi_lee@icloud.com">pinyi_lee@icloud.com</a><br>
+                linkedin：<a href="https://www.linkedin.com/in/peach-pinyi">https://www.linkedin.com/in/peach-pinyi</a><br>
+                github：<a href="https://github.com/pinyi-lee">https://github.com/pinyi-lee</a></p>
+            </blockquote>
+            <hr>
+
+            <p>身為後端工程師，下班後的時間主要分給三件事：<br>規律重訓、走進劇場、與一隻叫碳碳的貓。</p>
+            <hr>
+
+            <h4>訓練</h4>
+            <p>持續重訓。<br>不是為了某個數字，而是為了讓身體在十年後還願意配合我。</p>
+            <div class="photo-grid">
+                <img src="images/gym1.jpg" alt="重訓 1">
+                <img src="images/gym2.jpg" alt="重訓 2">
+            </div>
+            <hr>
+
+            <h4>碳碳</h4>
+            <p>一隻每天提醒我下班時間到了的貓。<br>讓我知道有些事不需要進步、不需要成長，只需要好好在一起。</p>
+            <div class="photo-grid">
+                <img src="images/cat1.jpg" alt="碳碳 1">
+                <img src="images/cat2.jpg" alt="碳碳 2">
+            </div>
+            <hr>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="copyright">© 2026 PinYi Lee. All rights reserved.</div>
+    </footer>
+</body>
+</html>
+</content>
+</invoke>

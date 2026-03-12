@@ -1,0 +1,219 @@
+/* =========================================================
+ * Personal Resume / Profile Stylesheet
+ * Pages: index.html (履歷) / offwork.html (興趣頁)
+ * ========================================================= */
+
+
+/* ---------- Base ---------- */
+
+body {
+  font: normal 15px/1.5em 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #404040;
+  line-height: 1.75;
+  letter-spacing: 0.008em;
+}
+
+a {
+  text-decoration: none;
+  color: #5badf0;
+}
+
+a:hover {
+  color: #0366d6;
+}
+
+
+/* ---------- Common typography ---------- */
+
+/* 引言區塊（信箱 / LinkedIn / GitHub） */
+blockquote {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 1em;
+  margin-left: 0;
+  border-left: 3px solid #eee;
+  color: #757575;
+}
+
+/* 區塊分隔線 */
+hr {
+  display: block;
+  border: none;
+  height: 2px;
+  margin: 40px auto;
+  background: #eee;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+}
+
+p {
+  margin-block-start: 1.5em;
+  margin-block-end: 1.5em;
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
+/* 內嵌技術關鍵字標籤（如 Golang / Python） */
+p code {
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+  font-size: inherit;
+  background-color: rgba(0, 0, 0, 0.06);
+  padding: 0 2px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 2px;
+  line-height: inherit;
+  word-wrap: break-word;
+}
+
+
+/* ---------- Resume specific typography ---------- */
+
+/* 公司名/在職期間（灰色副標） */
+h5.job-place {
+  font-size: 15px;
+  font-weight: 400;
+  color: #757575;
+  margin: 4px 0;
+  letter-spacing: 0.02em;
+}
+
+/* 各 Service 區塊標題（藍色左條） */
+h6.project {
+  font-size: 15px;
+  font-weight: 500;
+  color: #404040;
+  margin: 28px 0 8px 0;
+  padding-left: 10px;
+  border-left: 3px solid #5badf0;
+  letter-spacing: 0.02em;
+}
+
+/* 緊接在 project 標題後的條列項目 */
+h6.project + ul {
+  margin-top: 0;
+  color: #555;
+}
+
+
+/* ---------- Navigation ---------- */
+
+nav.navigation {
+  padding: 20px 20px 0;
+  background: rgba(255, 255, 255, 0.9);
+  margin: 0 auto;
+  text-align: right;
+  z-index: 100;
+}
+
+nav.navigation a {
+  padding: 8px 12px;
+  color: #5badf0;
+  font-size: 13px;
+  line-height: 1.35;
+  border-radius: 3px;
+}
+
+nav.navigation a:hover {
+  color: #0366d6;
+}
+
+@media (max-width: 700px) {
+  nav.navigation {
+    padding: 20px 10px 0 0;
+  }
+  nav.navigation a {
+    padding: 8px 8px;
+  }
+}
+
+
+/* ---------- Layout ---------- */
+
+.main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* 頁面開頭：頭像 + 主標題 */
+.profile {
+  margin: 60px auto 0 auto;
+  text-align: center;
+}
+
+.profile .avatar {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.profile h1 {
+  font-weight: 400;
+  letter-spacing: 0;
+  font-size: 20px;
+  color: #404040;
+  margin: 0;
+}
+
+/* 主要內容區（限制最大寬度、置中） */
+#section {
+  max-width: 580px;
+  margin: 48px auto 0 auto;
+  padding: 0 12px;
+}
+
+
+/* ---------- offwork.html photo grid ---------- */
+
+/* 兩欄照片網格，手機版自動轉單欄 */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+  /* 強迫瀏覽器使用高品質的影像縮放演算法（針對大多數現代瀏覽器） */
+  image-rendering: high-quality;
+
+  /* 針對舊版 WebKit (Safari, Chrome) 的相容性設定，開啟硬體加速 */
+  /* 這行通常對解決細節鋸齒最有效，因為它會請 GPU 來處理平滑化 */
+  transform: translateZ(0);
+
+  /* 消除縮放時可能產生的微小抖動 */
+  backface-visibility: hidden;
+}
+
+@media (max-width: 600px) {
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ---------- Footer ---------- */
+
+#footer {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: center;
+  color: #bbbbbb;
+  font-size: 14px;
+}
+
+#footer .copyright {
+  margin: 20px auto;
+  font-size: 15px;
+}

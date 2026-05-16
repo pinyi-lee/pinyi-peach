@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh-TW">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>PinYi's Personal Side</title>
+    <title>PinYi Lee | Senior Backend Engineer</title>
     <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <link rel="stylesheet" href="css/style.css">
@@ -10,17 +10,19 @@
 </head>
 <body>
     <nav class="navigation">
-        <a href="index.html">Personal Side</a>
+        <a href="index.html" class="active">Professional</a>
         <a href="offwork.html">Off Work</a>
     </nav>
+
     <main class="main">
         <header class="profile">
-            <img class="avatar" alt="avatar" src="images/avatar.png">
-            <h1>PinYi's Personal Side</h1>
+            <img class="avatar" alt="PinYi Lee avatar" src="images/avatar.png">
+            <h1>PinYi Lee | Senior Backend Engineer</h1>
         </header>
+
         <section id="section">
-            <p><strong>一名後端工程師，業餘投入重訓，和一隻貓住在一起</strong></p>
-            
+            <p><strong>一名專注於後端系統架構、微服務與線上服務可靠性的 Backend Engineer。</strong></p>
+
             <blockquote>
                 <p>email：<a href="mailto:pinyi_lee@icloud.com">pinyi_lee@icloud.com</a><br>
                 linkedin：<a href="https://www.linkedin.com/in/peach-pinyi">https://www.linkedin.com/in/peach-pinyi</a><br>
@@ -30,115 +32,87 @@
 
             <h4>專業摘要</h4>
             <ul>
-                <li>近 10 年軟體開發經驗，負責多個微服務從 0 到 1 的設計與上線</li>
-                <li>擅長大型分散式系統架構演進，包括跨資料庫遷移與即時通訊系統建構</li>
-                <li>具備 AWS 跨區網路排障經驗，從路由黑洞到分散式服務穩定性優化</li>
-                <li>具備 DevSecOps 思維，能在敏捷開發中兼顧維運穩定性與資安合規</li>
+                <li>具備超過 10 年軟體開發經驗，其中 7 年以上專注後端系統架構與微服務開發。</li>
+                <li>熟悉 Golang 與 Python，負責核心帳號、即時通訊、AI 串流 API 與內容兌換服務。</li>
+                <li>具備跨庫遷移、雙寫架構、WebSocket 水平擴展與 Race Condition 處理經驗。</li>
+                <li>具備線上服務可靠性排查經驗，曾定位跨區網路黑洞與系統重試風暴，並執行 DRP 演練。</li>
             </ul>
+            <hr>
 
             <h4>核心技術</h4>
-            <p>
-                <code>Golang</code> / <code>Python</code> / <code>Scala</code><br>
-                <code>PostgreSQL</code> / <code>MongoDB</code> / <code>DocumentDB</code> / <code>Redis</code> / <code>ElasticSearch</code><br>
-                <code>NATS</code> / <code>WebSocket</code><br>
-                <code>AWS</code> / <code>Docker</code>
-            </p>
+            <ul>
+                <li>主要語言：<code>Golang</code> / <code>Python</code></li>
+                <li>後端與架構：<code>RESTful API</code> / <code>WebSocket</code> / <code>Microservices</code> / <code>SQS</code></li>
+                <li>資料與快取：<code>PostgreSQL</code> / <code>MongoDB</code> / <code>Redis</code> / <code>Elasticsearch</code></li>
+                <li>雲端與工具：<code>AWS</code> / <code>Docker</code></li>
+            </ul>
             <hr>
-            
-            <h4 id="senior-backend-engineer-honyuan">Senior BackEnd Engineer</h4>
-            <h5 class="job-place">宏願數位股份有限公司 ｜ 2021/11~仍在職</h5>
-            <ul>
-                <li>1 個月內負責 AI-NPC 後端從 0 到 1，支援低延遲串流對話</li>
-                <li>負責 Account Service 跨資料庫雙寫遷移 (Voldemort → DocumentDB)</li>
-                <li>追查分散式 Rollback 資料遺失根因，建立 Key/Data 半自動修復流程</li>
-                <li>整合簡訊攻擊縱深防禦，從 Bot Manager、Rate Limiting 到總量保護</li>
-                <li>通過 PPnS 上線審核 (Threat Modeling、Behavior Inventory、白箱修復)</li>
-            </ul>
 
-            <h6 class="project">AI-NPC Service</h6>
-            <ul>
-                <li>在 AI-NPC 後端團隊中負責核心開發，一個月內完成從 0 到 1</li>
-                <li>使用 Python 開發 Chat Completions Streaming API，達成低延遲對話</li>
-            </ul>
-
-            <h6 class="project">Chat Service</h6>
-            <ul>
-                <li>使用 Golang 從零打造高可用通訊架構 (WebSocket、NATS、Redis)</li>
-                <li>導入 ElasticSearch 支援海量搜尋</li>
-            </ul>
+            <h4 id="senior-backend-engineer-honyuan">Senior Backend Engineer</h4>
+            <h5 class="job-place">宏願數位股份有限公司 ｜ 2021/11 – 至今</h5>
 
             <h6 class="project">Account Service</h6>
             <ul>
-                <li>負責帳號系統的大型 DB 遷移：Voldemort → DocumentDB 雙寫架構</li>
-                <li>追查叢集失效引發的 Rollback 資料遺失，建立 Key 自動補齊與 Data 重綁流程</li>
-                <li>針對簡訊攻擊，整合縱深防禦：Bot Manager、Service 封鎖、限流、總量保護</li>
+                <li>負責帳號系統 Voldemort → DocumentDB 遷移，實作雙寫架構。</li>
+                <li>追查叢集失效引發的資料遺失，建立 Key 補齊與 Data 重綁流程。</li>
+                <li>針對簡訊攻擊，整合 Bot Manager、帳號封鎖、API 限流與總量保護。</li>
             </ul>
 
-            <h6 class="project">Payment Service</h6>
+            <h6 class="project">Chat &amp; AI-NPC Service</h6>
             <ul>
-                <li>解決 Redeem 服務在高併發場景下的 Race Condition 異常</li>
-                <li>為 Pin Code 系統實作加密傳輸，避免 Pin 碼明碼外洩</li>
-                <li>追查 Playtime 慢查詢，從效能問題追到 10/13 位時間戳混用的資料異常</li>
+                <li>使用 Python 開發 Chat Completions Streaming API，支援低延遲 AI 回應。</li>
+                <li>使用 Golang 實作 WebSocket 通訊架構，結合 NATS 支援多節點水平擴展。</li>
+                <li>導入 Elasticsearch 建立搜尋索引，改善大量內容的查詢效率。</li>
             </ul>
 
-            <h6 class="project">CMS Service</h6>
+            <h6 class="project">Payment &amp; CMS Service</h6>
             <ul>
-                <li>開發 Expansion File 大檔處理模組 (上傳與 Checksum 驗證)</li>
-                <li>排查並修復 DRM License 授權異常，確保版權保護機制穩定運作</li>
+                <li>修正內容兌換 Race Condition，透過 Redis Lock 避免額度誤扣。</li>
+                <li>追查 Playtime 查詢異常，定位時間戳混用造成的大量資料撈取。</li>
+                <li>開發 Expansion File 大檔處理模組，並修復 DRM License 授權異常。</li>
             </ul>
 
-            <h6 class="project">Ops, SRE &amp; Security</h6>
+            <h6 class="project">Service Reliability</h6>
             <ul>
-                <li>負責 VDM 系統災難復原計畫與實戰演練 (DRP &amp; Drill Report)</li>
-                <li>排查 AWS 跨區網路連線異常，定位東京 → 中國路徑黑洞</li>
-                <li>排查中國區節點斷線引發的 Fluentd 重試風暴，避免 ES 網路 I/O 癱瘓</li>
-                <li>調整 AutoScaling 部署策略，綁定 LB 健康狀態解決上版中斷問題</li>
-                <li>通過 PPnS 上線審核 (Threat Modeling、Behavior Inventory、修復白箱弱點)</li>
+                <li>排查 AWS 跨區網路異常，追蹤 VPC 路由並定位跨國路徑黑洞。</li>
+                <li>排查 Fluentd 重試風暴，定位 ES 滿載與服務重試造成的異常流量。</li>
+                <li>執行 DRP 災難復原演練，參與 Threat Modeling 與白箱弱點修補。</li>
             </ul>
             <hr>
-            
-            <h4 id="backend-engineer-htc">BackEnd Engineer</h4>
-            <h5 class="job-place">宏達國際電子股份有限公司 ｜ 2018/10~2021/10</h5>
-            <p><code>Scala</code> / <code>MySql</code> / <code>Redis</code> / <code>Magento(PHP)</code></p>
+
+            <h4 id="backend-engineer-htc">Backend Engineer</h4>
+            <h5 class="job-place">宏達國際電子股份有限公司 ｜ 2018/10 – 2021/10</h5>
+            <p><code>Scala</code> / <code>MySQL</code> / <code>Redis</code> / <code>Magento(PHP)</code></p>
             <ul>
-                <li>用一個月的時間，學習 Scala 語言與後端知識，轉職為後端工程師</li>
-                <li>撰寫 Playtime Service，用於紀錄遊玩時間，並協同建立「同時遊玩限制」機制</li>
-                <li>重構整個 viveport.com，讓客服、營運等其他單位，更便於使用網站</li>
-                <li>利用 Magento(PHP)，幫助公司更快速建構商城。如：企業商城、NFT、藝術品</li>
+                <li>開發 Playtime 服務，實作分散式 Concurrent Session 控制機制。</li>
+                <li>重構 viveport.com 系統，優化營運與客服後台流程，提升跨部門效率。</li>
+                <li>使用 Magento 快速建構 B2B 企業、NFT 與藝術品等多個客製化商城。</li>
             </ul>
             <hr>
-            
-            <h4 id="unity-developer-htc">Unity Developer</h4>
-            <h5 class="job-place">宏達國際電子股份有限公司 ｜ 2017/8~2018/9</h5>
-            <p><code>Unity(C#)</code> / <code>Bigquery</code> / <code>DataStudio</code></p>
+
+            <h4 id="unity-developer-sdet-htc">Unity Developer / SDET</h4>
+            <h5 class="job-place">宏達國際電子股份有限公司 ｜ 2017/03 – 2018/09</h5>
+            <p><code>Unity(C#)</code> / <code>Python</code> / <code>BigQuery</code> / <code>Looker Studio</code></p>
             <ul>
-                <li>為公司救火、接回外包，讓 Vive Focus VR Store 與硬體一起出貨，順利上線</li>
-                <li>在主管指導下，為 Client 產品建立報表，並於百人團隊內演講，宣傳數據的重要</li>
+                <li>接手 Vive Focus VR Store 外包專案，順利支援硬體同步首發上線。</li>
+                <li>建置 BigQuery / Looker Studio 報表，並於百人團隊發表演說，推動數據驅動文化。</li>
+                <li>使用 C#、Unity 與 Python 開發自動化測試，加速上線流程。</li>
             </ul>
             <hr>
-            
-            <h4 id="sdet-htc">Software Development Engineer In Test</h4>
-            <h5 class="job-place">宏達國際電子股份有限公司 ｜ 2017/3~2017/7</h5>
-            <p><code>Unity(C#)</code> / <code>Python</code></p>
-            <ul>
-                <li>為公司多項 Unity SDK 撰寫自動化測試程式，提升除錯效率、加速上線流程</li>
-            </ul>
-            <hr>
-            
+
             <h4 id="unity-developer-game-studios">Unity Developer</h4>
-            <h5 class="job-place">超級遊戲股份有限公司 ｜ 2015/9~2017/2</h5>
-            <h5 class="job-place">威龍線上股份有限公司 ｜ 2015/4~2015/8</h5>
-            <h5 class="job-place">望星者數位科技有限公司 ｜ 2014/6~2015/3</h5>
+            <h5 class="job-place">超級遊戲股份有限公司 ｜ 2015/09 – 2017/02</h5>
+            <h5 class="job-place">威龍線上股份有限公司 ｜ 2015/04 – 2015/08</h5>
+            <h5 class="job-place">望星者數位科技有限公司 ｜ 2014/06 – 2015/03</h5>
             <p><code>Unity(C#)</code></p>
             <ul>
-                <li>利用Unity製作雙平台遊戲</li>
-                <li>擁有UI互動、Server串接、3D動畫、關卡編輯器…等等的遊戲製作知識</li>
+                <li>使用 Unity 開發雙平台遊戲，熟悉 UI、3D 動畫等完整遊戲製作流程。</li>
             </ul>
             <hr>
 
-            <h4 id="continuous-learning">近期進修</h4>
-            <h5 class="job-place">Terry &amp; Bohr 工程師實戰營 ｜ 2026/05 ~ 2026/06</h5>
-            <h5 class="job-place">WeHelp 深度學習 ｜ 2025/10 ~ 2026/04</h5>
+            <h4 id="continuous-learning">進修與培訓</h4>
+            <h5 class="job-place">Terry &amp; Bohr 工程師實戰營 ｜ 2026/05 – 2026/06</h5>
+            <h5 class="job-place">WeHelp 深度學習 ｜ 2025/10 – 2026/04</h5>
             <h5 class="job-place">王茂林 &amp; 小賴 Kubernetes 應用開發實戰 ｜ 2024/11</h5>
             <hr>
 
@@ -146,6 +120,7 @@
             <h5 class="job-place">實踐大學 ｜ 資訊模擬與設計學系 學士</h5>
         </section>
     </main>
+
     <footer id="footer">
         <div class="copyright">© 2026 PinYi Lee. All rights reserved.</div>
     </footer>

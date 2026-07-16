@@ -55,28 +55,30 @@
 
             <h6 class="project">Account Service</h6>
             <ul>
-                <li>負責帳號系統 Voldemort → DocumentDB，資料庫遷移。</li>
-                <li>追查叢集失效引發的資料遺失，建立 Key 補齊與 Data 重綁流程。</li>
-                <li>針對簡訊攻擊，整合 Bot Manager、帳號封鎖、API 限流與總量保護。</li>
+                <li>設計 Ledger-Routed Lazy Migration，推動 Voldemort → DocumentDB 零停機遷移。</li>
+                <li>排查 Voldemort 節點故障造成的 mapping 缺失，釐清 rollback 誤刪根因，並建立 Key 補齊與 Data 重綁流程。</li>
+                <li>處理 SMS abuse 事件，補強帳號封鎖與 Redis 限流策略，協同導入 reCAPTCHA，降低惡意流量與簡訊濫用成本。
+</li>
             </ul>
 
             <h6 class="project">Chat &amp; AI-NPC Service</h6>
             <ul>
-                <li>使用 Python 開發 Chat Completions Streaming API，支援低延遲 AI 回應。</li>
-                <li>使用 Golang 實作 WebSocket 通訊架構，結合 NATS 支援多節點水平擴展。</li>
-                <li>導入 Elasticsearch 建立搜尋索引，改善大量內容的查詢效率。</li>
+                <li>使用 Python 開發 Streaming API，透過非同步協程串接 LLM 文字分段與語音模型，支援低延遲文字與語音回應。</li>
+                <li>使用 Golang 實作 WebSocket 通訊架構，結合 NATS Pub/Sub 進行跨節點事件通知，支援多節點水平擴展。</li>
+                <li>導入 Elasticsearch 建立使用者名稱搜尋索引，透過 Redis 暫存與批次寫入隔離搜尋流量，降低主庫查詢壓力。</li>
             </ul>
 
             <h6 class="project">Payment &amp; CMS Service</h6>
             <ul>
-                <li>修正內容兌換 Race Condition，透過 Redis Lock 避免額度誤扣。</li>
-                <li>追查 Playtime 查詢異常，定位時間戳混用造成的大量資料撈取。</li>
+                <li>修正裝置禮物兌換 Race Condition，透過 Redis Lock 避免 code pool 誤扣。</li>
+                <li>排查 SQL CPU 滿載與慢查詢，定位 Playtime timestamp 秒/毫秒混用問題，並限制查詢區間以降低 SQL 負載。</li>
             </ul>
 
             <h6 class="project">Service Reliability</h6>
             <ul>
-                <li>排查 AWS 跨區網路異常，追蹤 VPC 路由並定位跨國路徑黑洞。</li>
-                <li>執行 DRP 災難復原演練，參與 Threat Modeling 與白箱弱點修補。</li>
+                <li>排查跨區 API 異常（504 Timeout），追蹤 AWS VPC 拓撲並定位 JP → CN 路由異常。</li>
+                <li>執行 Voldemort DRP 演練，驗證 EBS snapshot 恢復流程與 RPO/RTO，並參與 Threat Modeling 與白箱弱點修補。</li>
+
             </ul>
             <hr>
 
